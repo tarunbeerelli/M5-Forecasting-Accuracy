@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>  
+Sales Predictions 
+</title>
+<style>
+body {
+  margin: 0;
+  height: 45vh;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+.bg {
+  background-image: url("static/stocking.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.7;
+}
+div {
+  background-color: lightgrey;
+  width: 500px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  opacity: 0.95;
+  margin: auto;
+}
+</style>
+</head>
+<body class="bg">
+
+<div>
+  <h2>Walmart Sales forecasting for next 28 days</h2>
+  <p>Enter the product ID and choose a Walmart store</p> 
+  <form action="/predict" method="post">
+    <label for="product_id">Product ID:</label>
+    <input type="text" id="product_id" name="product_id"><br><br>
+    <label for="store_id">Store ID:</label>
+    <select id="store_id" name="store_id">
+      <option value="CA_1">CA_1</option>
+      <option value="CA_2">CA_2</option>
+      <option value="CA_3">CA_3</option>
+      <option value="CA_4">CA_4</option>
+      <option value="TX_1">TX_1</option>
+      <option value="TX_2">TX_2</option>
+      <option value="TX_3">TX_3</option>
+      <option value="WI_1">WI_1</option>
+      <option value="WI_2">WI_2</option>
+      <option value="WI_3">WI_3</option>
+    </select>
+    <input type="submit" value="Submit" />
+  </form>
+</div>
+</body>
+</html>
